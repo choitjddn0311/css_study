@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+:root {
+    --color: #222;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--color);
+}
+.contain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.contain .card {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contain .card:hover {
+    height: 350px;
+}
+.contain .card .img_box {
+    position: absolute;
+    inset: 20px 20px 20px 20px;
+    background: #f00;
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+.contain .card:hover .img_box {
+    /* inset은 포지션 위치 조정을 한번에 해주는 코드인듯? */
+    /* 방향은 top > right > bottom > left 순서 */
+    inset: -50px 60px 250px 60px;
+    /* box-shadow순서 x | y | blur | spread | color (blur=흐림효과 값이 높을수록 효과는 커짐 초기값은 0),(spread=그림자의 확대축소 양수는 확장 음수는 축소 초기값 0 spread는 무조건 blur 뒤에 해야함*/
+    box-shadow: 0 0 0 10px var(--color);
+}
+.contain .card .img_box::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    left: -30px;
+    border-top-right-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: 5px -5px 0 4px var(--color);
+    /* 포인트 이벤트 대상을 설정하는 명령어인듯 ex)a태그에 맥이면 링크걸어줘도 클릭안됨 왜쓰는거임? */
+    pointer-events: none;
+    transition: 0.5s;
+}
+.contain .card:hover .img_box::before {
+    opacity: 1;
+    transform: translateY(50px);
+}
+.contain .card .img_box::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    right: -30px;
+    border-top-left-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: -5px -5px 0 4px var(--color);
+    pointer-events: none;
+    transition: 0.5s;
+}
+.contain .card:hover .img_box::after {
+    opacity: 1;
+    transform: translateY(50px);
+}
+.contain .card .img_box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 비율을 조정하면서 일부넘어가는 이미지는 자르는거 같음 부모요소 사이즈에 맞춰서 조정하는듯 */
+    object-fit: cover;
+    border-radius: 15px;
+}
+.contain .card p {
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: 0.5s;
+}
+.contain .card:hover p {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(40px);
+}
+.contain .card h2 {
+    position: absolute;
+    bottom: 8px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.contain .card:hover h2 {
+    padding: 5px 25px;
+    background: #65ff50;
+    bottom: -25px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 10px var(--color);
+}
