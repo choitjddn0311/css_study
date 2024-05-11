@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand' , sans-serif;
+}
+body {
+    background: #292727;
+}
+header {
+    width: 100%;
+    display: flex;
+    background: #ffffff;
+}
+header h1 {
+    width: 20%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(20, 88, 214);
+    font-weight: 600;
+    font-size: 3em;
+}
+header > h1 > span {
+    color: black;
+    font-weight: bold;
+}
+header nav {
+    width: 70%;
+    height: 100px;
+}
+header nav ul {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    height: 100%;
+}
+header nav ul li {
+    list-style: none;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: 450;
+}
+header nav ul .check_menu , 
+header nav ul li:hover {
+    color: rgb(20, 88, 214);
+}
+.menu {
+    width: 10%;
+    height: 100px;
+}
+.menu i {
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+section .my_title {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , 0);
+}
+section .my_title p {
+    font-size: 1.5em;
+    color: white;
+}
+section .my_title span {
+    color: #11b6cc;
+    text-transform: uppercase;
+}
