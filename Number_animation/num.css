@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald' , sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #3d3d3d;
+}
+.contain {
+    position: absolute;
+    display: flex;
+    transform-style: preserve-3d;
+    /* gap 간격띄우기 */
+    gap: 10px;
+    transform: rotateY(30deg) rotateX(10deg);
+}
+.text {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: 2.5s ease-in-out;
+    transition-delay: calc(0.25s * var(--i));
+}
+.text span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 4em;
+    background: linear-gradient(#434343 , #535353);
+    transform-style: preserve-3d;
+    transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+} 
+.text::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #373737;
+    /* transform-origin 기본속성이 가운데라고 하긴하는데 잘 모르겠음 ㅋㅋㅋㅋ */
+    transform-origin: left;
+    /* 이거하니까 뒤에가 안보임 뭔가 ㅈㄴ 신기한데 아직도 before after위치를 감을 못쳐잡겠네 */
+    transform: rotateY(90deg) translateX(-50px);
+}
+.text:last-child span {
+    background: linear-gradient(#2959c0 , #327ded);
+}
+.text:last-child::before {
+    background: #2f5dbe;
+}
+h2 {
+    position: absolute;
+    bottom: 50px;
+    color: #252525;
+    font-size: 2em;
+    transition: 0.5s;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 0 20px #fff;
+}
+h2:after {
+    visibility: hidden;
+    content: ' 2024';
+}
+.text:hover {
+    cursor: default;
+}
+.text:hover ~ .text:nth-child(2) {
+    transition: 2s;
+    transform: rotateX(360deg);
+}
+.text:hover ~ .text:nth-child(3) {
+    transform: 2.5s;
+    transform: rotateX(720deg);
+}
+.text:hover ~ .text:nth-child(4) {
+    transition: 3s;
+    transform: rotateX(810deg);
+}
+h2:hover:after {
+    visibility: visible;
+    color: #2959c0;
+    text-shadow: 0 0 20px #2959c0;
+}
