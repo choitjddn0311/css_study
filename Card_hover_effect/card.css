@@ -120,6 +120,7 @@ body {
     bottom: 8px;
     transition: 0.5s;
     font-weight: 600;
+    z-index: -1;
 }
 .contain .card:hover h2 {
     padding: 5px 25px;
@@ -127,4 +128,6 @@ body {
     bottom: -25px;
     border-radius: 15px;
     box-shadow: 0 0 0 10px var(--color);
+    position: absolute;
+    z-index: 1;
 }
