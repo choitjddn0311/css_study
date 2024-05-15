@@ -19,7 +19,7 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(20, 88, 214);
+    color: #11b6cc;
     font-weight: 600;
     font-size: 3em;
 }
@@ -49,7 +49,7 @@ header nav ul li {
 }
 header nav ul .check_menu , 
 header nav ul li:hover {
-    color: rgb(20, 88, 214);
+    color: #11b6cc;
 }
 .menu {
     width: 10%;
