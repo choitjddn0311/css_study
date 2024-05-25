@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a252c;
+}
+.contain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+.contain .box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transition: 0.5s;
+    /* 검색해도 나오지않는다 relflect이 반영하다 라는 뜻인걸 봐서 아 모르겠음
+    근데 아래로 복사되서 나옴 신기 */
+    -webkit-box-reflect: below 1px linear-gradient(transparent , #0002);
+}
+.box:nth-child(1) {
+    background-color: lightblue;
+}
+.box:nth-child(2) {
+    background-color: lightcoral;
+}
+.box:nth-child(3) {
+    background-color: lightgoldenrodyellow;
+}
+.box:nth-child(4) {
+    background-color: lightgreen;
+}
+.box:nth-child(5) {
+    background-color: lightgray;
+}
+.contain:hover > :not(:hover) {
+    margin: 0 -20px;
+    filter: drop-shadow(0 0 25px #000) drop-shadow(0 0 45px #000);
+    /* perspective 는 3d효과할때 쓴다한다 숫자는 클수록 작게 확대? 되는듯 */
+    transform: perspective(500px) rotateY(45deg) scale(0.95);
+}
+.contain .box:hover ~.box {
+    transform: perspective(500px) rotateY(-45deg) scale(0.95);
+}
+.contain .box:hover {
+    transform: perspective(500px) rotateY(0) scale(1.5);
+    z-index: 100000;
+}
