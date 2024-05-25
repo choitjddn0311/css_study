@@ -21,11 +21,6 @@
     border-radius: 10px;
     transition: 0.5s;
 }
-.contain div:not(:hover) {
-    scale: 1;
-    transition: 0.5s;
-    filter: grayscale(50%);
-}
 .contain div:hover {
     scale: 1.2;
 }
