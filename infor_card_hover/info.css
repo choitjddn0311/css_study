@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+.contain {
+    width: 450px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: #f1d2f3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    overflow: hidden;
+}
+.img_area {
+    width: 450px;
+    height: 600px;
+    background: url(images/nature.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    filter: grayscale(70%);
+    transition: 0.5s;
+}
+.info_area {
+    width: 450px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: 0.5s;
+    position: absolute;
+    top: 600px;
+}
+.info_contain {
+    width: 400px;
+    height: 300px;
+    margin: 25px;
+    margin-top: 0;
+    position: relative;
+}
+.info_area h3 {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    letter-spacing: 1.2px;
+    font-size: 2em;
+    color: #fff;
+}
+.info_area p {
+    position: absolute;
+    top: 30%;
+    color: #fff;
+}
+.about_contain {
+    width: 50%;
+    height: 75px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.about_contain div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+}
+.about_contain div:first-child {
+    background: lightblue;
+}
+.about_contain div:nth-child(2) {
+    background: lightcoral;
+}
+.about_contain div:last-child {
+    background: lightgreen;
+}
+.img_area:hover ~.info_area {
+    position: absolute;
+    top: 200px;
+    transition: 0.5s;
+}
+.img_area:hover {
+    filter: grayscale(0%);
+}
