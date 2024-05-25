@@ -22,7 +22,7 @@
     background: url(images/nature.jpg);
     background-size: cover;
     border-radius: 20px;
-    filter: grayscale(70%);
+    filter: grayscale(90%);
     transition: 0.5s;
 }
 .info_area {
