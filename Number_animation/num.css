@@ -88,7 +88,7 @@ h2:after {
 }
 .text:hover ~ .text:nth-child(4) {
     transition: 3s;
-    transform: rotateX(810deg);
+    transform: rotateX(990deg);
 }
 h2:hover:after {
     visibility: visible;
