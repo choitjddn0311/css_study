@@ -42,16 +42,55 @@ form {
 .infoArea {
     width: 80%;
     height: 50%;
-    background: #111;
     border-radius: 20px;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50% , -50%);
 }
-.infoArea > input {
-    width: 200px;
-    height: 30px;
-    background: transparent;
-    border: 1px solid #fff;
+.inputContain {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 20%;
+}
+.inputContain input {
+    width: 100%;
+    height: 50px;
+    border-width: 0 0 1px;
+    outline: none;
+}
+.inputContain  input[type=text] {
+    position: absolute;
+    top: 20px;
+}
+.inputContain  input[type=password] {
+    position: absolute;
+    bottom: 0;
+}
+.idCon {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.idCon > span {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+}
+.passwordCon {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.passwordCon > span {
+    position: absolute;
+    bottom: 18px;
+    z-index: 1;
+}
+.idCon input:focus ~ span,
+.idCon input:valid ~ span {
+    position: absolute;
+    top: -10px;
+
 }
