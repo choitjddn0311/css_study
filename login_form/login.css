@@ -1,66 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' , sans-serif;
 }
 body {
-    background-color: #eee;
+    background: #ebe3da;
 }
-.container {
+form {
+    width: 450px;
+    height: 600px;
+    background: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    width: 400px;
-    height: 500px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-.container > h1 {
-    height: 30px;
-    padding: 10px 0;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-form {
-    position: absolute;
-    top: 100px;
-    width: 100%;
-    height: 400px;
-}
-.id_put {
-    width: 90%;
-    height: 30px;
-    padding: 10px 0;
-    margin-left: 18px;
-    border: 1px solid #eee;
-}
-.password_put {
-    width: 90%;
-    height: 30px;
-    margin-top: 20px;
-    padding: 10px 0;
-    margin-left: 18px;
-    border: 1px solid #eee;
-}
-.submit {
-    width: 90%;
-    height: 50px;
-    margin-top: 70px;
-    margin-left: 18px;
-    border: none;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-input[type=checkbox] {
-    position: absolute;
-    top: 140px;
-    left: 18px;
-    width: 15px;
-    height: 15px;
-}
-.remember {
-    position: absolute;
-    top: 137px;
-    left: 40px;
-    font-size: 15px;
+    border-radius: 10px;
 }
