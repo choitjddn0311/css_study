@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: beige;
+}
 label {
     display: block;
 }
@@ -12,7 +15,6 @@ label {
     transform: translate(-50% , -50%);
     width: 1000px;
     height: 300px;
-    background: lightblue;
     overflow: hidden;
 }
 .slide_con {
@@ -44,4 +46,29 @@ label {
     width: 1000px;
     height: 100%;
     background: lightgreen;
+}
+.prev_btn , .next_btn {
+    width: 50px;
+    height: 50px;
+    background: #f9f9f9;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 48%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.prev_btn {
+    left: -100px;
+    z-index: 5;
+}
+.next_btn {
+    right: 350px;
+}
+input {
+    /* display: none; */
+}
+#next:checked ~.slide1 {
+    left: -1000px;
 }
