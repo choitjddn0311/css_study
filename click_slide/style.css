@@ -61,7 +61,6 @@ label {
 }
 .prev_btn {
     left: -100px;
-    z-index: 5;
 }
 .next_btn {
     right: 350px;
