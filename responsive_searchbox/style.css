@@ -62,3 +62,6 @@ body {
 #check {
     display: none;
 }
+input[type=text] {
+    color: #ff676d;
+}
